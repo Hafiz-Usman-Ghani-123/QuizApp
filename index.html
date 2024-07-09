@@ -32,6 +32,14 @@
             width: 100px;
             height: 40px;
         }
+        .donoForms{
+            border: 4px solid black ;
+            border-top:none ;
+        }
+        .formBtns{
+            border: 4px solid black ;
+            border-bottom:none ;
+        }
     </style>
 </head>
 
@@ -46,15 +54,15 @@
         </div>
 
         <div class="row secondRow d-flex justify-content-center ">
-            <div class="donoForms bg-light col-12 col-sm-8 pt-3">
+            <div class="donoForms bg-light col-12 col-sm-8 pt-3 rounded-bottom" id="bothForms">
                 <!--sign up Form  -->
 
                 <form id="signupF" class="signUp-form form  ">
                     <h1 class="text-center">Sign Up</h1>
+                    <label for="">Full Name : </label>
+                    <input type="text" id="" class="form-control" placeholder="Enter Your Full Name "><br>
                     <label for="">Email : </label>
                     <input type="email" id="email1" class="form-control" placeholder="Enter an Email"><br>
-                    <label for="">Address : </label>
-                    <input type="text" id="" class="form-control" placeholder="Enter Your Address"><br>
                     <label for="">Password : </label>
                     <input type="password" name="" id="pass1" class="form-control" placeholder="Enter Password"><br>
                     <div class="bg-success py-3 d-flex justify-content-center rounded  mb-3"><button class="btn btn-light  " type="submit">Sign Up</button></div>

@@ -12,9 +12,16 @@ logBtn.addEventListener("click", () => {
 });
 // for changing login  ==>  sign up form
 signBtn.addEventListener("click", () => {
-  logForm.style.display = "none";
-  signForm.style.display = "block";
+  if (signForm.style.display === "block"){ 
+    alert(`Are you a Blind ? 
+That's already selected !`)
+  }else{
+    logForm.style.display = "none";
+    signForm.style.display = "block";
+  }
 });
+// agar signup form pehly se select ho to
+
 //
 // Coming code for signup FORM submission
 //
@@ -39,6 +46,7 @@ document.getElementById("signupF").addEventListener("submit", function (e) {
 });
 
 // Login Form Submission
+// 
 document.getElementById("loginF").addEventListener("submit", function (e) {
   e.preventDefault(); // Default form submission behavior ko rokna
   const email = document.getElementById("email2").value; // Username ko read karna
@@ -53,10 +61,13 @@ document.getElementById("loginF").addEventListener("submit", function (e) {
   );
 
   if (validUser) {
+    // window.open("https://google.com"); // <- This is what makes it open in a new window.;
+    document.querySelector(".container").style.display = 'none'
+    // console.log(bothForms);
+    
     alert("Login successful !"); // Success message show karna
-    // console.log("http://www.google.com");  // login hony k baad user ko mave karana
-    window.open("https://google.com"); // <- This is what makes it open in a new window.;
   } else {
     alert("Invalid username or password"); // Error message show karna
   }
 });
+// 
