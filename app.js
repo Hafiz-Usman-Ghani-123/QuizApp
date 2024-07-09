@@ -62,7 +62,7 @@ document.getElementById("loginF").addEventListener("submit", function (e) {
 
   if (validUser) {
     // window.open("https://google.com"); // <- This is what makes it open in a new window.;
-    document.querySelector(".container").style.display = 'none'
+    document.querySelector(".container1").style.display = 'none'
     // console.log(bothForms);
     
     alert("Login successful !"); // Success message show karna
