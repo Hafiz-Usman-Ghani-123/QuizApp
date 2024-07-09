@@ -23,26 +23,40 @@ document.getElementById("signupF").addEventListener("submit", function (e) {
   const email = document.getElementById("email1").value; // Username ko read karna
   const password = document.getElementById("pass1").value; // Password ko read karna
 
+  // Pehle se existing users ko `localStorage` se retrieve karna YA phr new array banana
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+
   // Naya user object
-  const newUser = {
-    email: email,
-    password: password,
-  };
+  const newUser = { email, password };
 
-  // tamam users ki aik array
-  let users = [];
-  //
-  const userExists = users.some((user) => user.email === username);
+  // Naya user ko users array me add karna
+  users.push(newUser);
 
-  if (userExists) {
-    alert("Username already exists! Please choose another username.");
+  // Updated users array ko `localStorage` me save karna
+  localStorage.setItem("users", JSON.stringify(users));
+
+  alert("Signup successful!");
+});
+
+// Login Form Submission
+document.getElementById("loginF").addEventListener("submit", function (e) {
+  e.preventDefault(); // Default form submission behavior ko rokna
+  const email = document.getElementById("email2").value; // Username ko read karna
+  const password = document.getElementById("pass2").value; // Password ko read karna
+
+  // `localStorage` se stored users data ko retrieve karna
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+
+  // User validation
+  const validUser = users.find(
+    (user) => user.email === email && user.password === password
+  );
+
+  if (validUser) {
+    alert("Login successful !"); // Success message show karna
+    // console.log("http://www.google.com");  // login hony k baad user ko mave karana
+    window.open("https://google.com"); // <- This is what makes it open in a new window.;
   } else {
-    // Naya user ko users array me add karna
-    users.push(newUser);
-
-    // Updated users array ko `localStorage` me save karna
-    localStorage.setItem("users", JSON.stringify(users));
-
-    alert("Signup successful!");
+    alert("Invalid username or password"); // Error message show karna
   }
 });
