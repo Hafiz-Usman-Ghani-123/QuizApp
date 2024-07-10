@@ -28,19 +28,23 @@
         .login-form {
             display: none;
         }
-        button{
+
+        button {
             width: 100px;
             height: 40px;
         }
-        .donoForms{
-            border: 4px solid black ;
-            border-top:none ;
+
+        .donoForms {
+            border: 4px solid black;
+            border-top: none;
         }
-        .formBtns{
-            border: 4px solid black ;
-            border-bottom:none ;
+
+        .formBtns {
+            border: 4px solid black;
+            border-bottom: none;
         }
-        .container1{
+
+        .container1 {
             display: none;
         }
     </style>
@@ -69,7 +73,9 @@
                     <input type="email" id="email1" class="form-control" placeholder="Enter an Email"><br>
                     <label for="">Password : </label>
                     <input type="password" name="" id="pass1" class="form-control" placeholder="Enter Password"><br>
-                    <div class="bg-success py-3 d-flex justify-content-center rounded  mb-3"><button class="btn btn-light  " type="submit">Sign Up</button></div>
+                    <div class="bg-success py-3 d-flex justify-content-center rounded  mb-3">
+                        <button class="btn btn-light  " type="submit">Sign Up</button>
+                    </div>
                 </form>
 
                 <!-- Login Form  -->
@@ -80,32 +86,50 @@
                     <input type="email" id="email2" class="form-control" placeholder="Enter an Email"><br>
                     <label for="">Password</label>
                     <input type="password" name="" id="pass2" class="form-control" placeholder="Enter Password"><br>
-                    <div class="bg-success py-3 d-flex justify-content-center rounded  mb-3"><button class="btn btn-light  " type="submit">Log In</button></div>
+                    <div class="bg-success py-3 d-flex justify-content-center rounded  mb-3">
+                        <button class="btn btn-light  " type="submit">Log In</button>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
     <!-- / -->
-     <!-- coming code just for quiz app  -->
+    <!-- coming code just for quiz app  -->
 
-     <div class="container bg-success">
+    <div class="container px-4 px-sm-0 mt-5">
         <div class="row d-flex justify-content-center">
-            <div class="col-12 col-md-8 bg-light">
-                <div class="ques">Q...</div>
-                <hr>
-                <div class="options">
-                    <label for=""><input type="radio" name="" id=""> option 1 </label><br>
-                    <label for=""><input type="radio" name="" id=""> option 2</label><br>
-                    <label for=""><input type="radio" name="" id=""> option 3 </label><br>
-                    <label for=""><input type="radio" name="" id=""> option 4 </label>
+            <div class="col-12 col-md-8 bg-light py-3 rounded border border-success border-3">
+                <h1 class="text-center ">JS Quiz </h1>
+                <div>
+                    Q ) <span id="question"></span>
                 </div>
-                <hr>
-                <div class=""><button>Submit</button></div>
+                <hr style="height: 3px;color:darkgreen;">
+                <div class="FourOptions px-2">
+                    <div class="row1">
+                        <input type="radio" name="option" id="radio1" class="radioBtn">
+                        <label for="radio1" class="option" id="option1"> Option 1</label>
+                    </div>
+                    <div class="row2">
+                        <input type="radio" name="option" id="radio2" class="radioBtn">
+                        <label for="radio2" class="option" id="option2"> Option 2 </label>
+                    </div>
+                    <div class="row3">
+                        <input type="radio" name="option" id="radio3" class="radioBtn">
+                        <label for="radio3" class="option" id="option3"> Option 3</label>
+                    </div>
+                    <div class="row4">
+                        <input type="radio" name="option" id="radio4" class="radioBtn">
+                        <label for="radio4" class="option" id="option4"> Option 4</label>
+                    </div>
+                </div>
+                <hr style="height: 3px;color:darkgreen;">
+                <div class="d-flex justify-content-center"><button class="btn btn-success "
+                        id="nextQuesBtn">Submit</button></div>
             </div>
         </div>
-     </div>
+    </div>
 
-<!--  -->
+    <!--  -->
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
