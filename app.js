@@ -116,12 +116,29 @@ const questions = [
   },
 ];
 
-// ye code sirf questions print karny k liye hy
-let num = 0;
+// questions print karny k liye hy
+//
+let num = 0; // question or option k index k liye ...
 let questionBox = document.getElementById("question");
+let quesNum = document.querySelector(".quesNum");
 
+//  options print karny k liye hy
+let op1 = document.getElementById("option1");
+let op2 = document.getElementById("option2");
+let op3 = document.getElementById("option3");
+let op4 = document.getElementById("option4");
+
+// first question print krny k liye .
 questionBox.innerHTML = questions[num].ques;
+// first options print krny k liye .
+op1.innerText = questions[num].a;
+op2.innerText = questions[num].b;
+op3.innerText = questions[num].c;
+op4.innerText = questions[num].d;
+// question number k liye
+quesNum.innerText = `Q ${num + 1}) `;
 
+// next question krny k liye event
 document.getElementById("nextQuesBtn").addEventListener("click", () => {
   // questions ki taadaad se zada na bary
   if (num === questions.length - 1) {
@@ -129,19 +146,21 @@ document.getElementById("nextQuesBtn").addEventListener("click", () => {
   } else {
     num++;
   }
+  //  questions barhany k liye
   questionBox.innerText = questions[num].ques;
+  ///  option barhany k liye
+  op1.innerText = questions[num].a;
+  op2.innerText = questions[num].b;
+  op3.innerText = questions[num].c;
+  op4.innerText = questions[num].d;
+  // question number barhany k liye 
+quesNum.innerText = `Q ${num + 1}) `;
+
 });
 
-// ye code sirf options print karny k liye hy
-let op1 = document.getElementById("option1").textContent;
-let op2 = document.getElementById("option2").textContent;
-let op3 = document.getElementById("option3").textContent;
-let op4 = document.getElementById("option4").textContent;
-
-
-document.getElementById("nextQuesBtn").addEventListener("click", () => {
-  op1 = questions[num].a;
-  op2 = questions[num].b;
-  op3 = questions[num].c;
-  op4 = questions[num].d;
-});
+// op1.innerText = questions[num].a;
+// op2.innerText = questions[num].b;
+// op3.innerText = questions[num].c;
+// op4.innerText = questions[num].d;
+// console.log(num);
+document.getElementById("nextQuesBtn").addEventListener("click", () => {});
