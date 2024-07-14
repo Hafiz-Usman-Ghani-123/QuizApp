@@ -20,8 +20,6 @@ That's already selected !`);
     signForm.style.display = "block";
   }
 });
-// agar signup form pehly se select ho to
-
 //
 // Coming code for signup FORM submission
 //
@@ -47,7 +45,7 @@ document.getElementById("signupF").addEventListener("submit", function (e) {
 
 // Login Form Submission
 //
-document.getElementById("loginF").addEventListener("submit", function (e) {
+logForm.addEventListener("submit", function (e) {
   e.preventDefault(); // Default form submission behavior ko rokna
   const email = document.getElementById("email2").value; // Username ko read karna
   const password = document.getElementById("pass2").value; // Password ko read karna
@@ -61,11 +59,8 @@ document.getElementById("loginF").addEventListener("submit", function (e) {
   );
 
   if (validUser) {
-    // window.open("https://google.com"); // <- This is what makes it open in a new window.;
-    document.querySelector(".container1").style.display = "none";
-    // console.log(bothForms);
-
     alert("Login successful !"); // Success message show karna
+    window.location.href = "quiz.html";
   } else {
     alert("Invalid username or password"); // Error message show karna
   }

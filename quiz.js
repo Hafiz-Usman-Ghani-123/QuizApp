@@ -44,13 +44,6 @@ const questions = [
   },
 ];
 //          (structure)
-//
-//  *  question Print krna
-//  *  options Print krna
-//  *  question change function
-//  *  option change function
-//  *  option change function
-//
 
 let num = 0; // question or option k index k liye ...
 let selected = false; // to check the radio btn is checked or not ..
