@@ -60,8 +60,13 @@ logForm.addEventListener("submit", function (e) {
 
   if (validUser) {
     alert("Login successful !"); // Success message show karna
-    window.location.href = "quiz.html";
+    window.location.replace( "quiz.html");
   } else {
-    alert("Invalid username or password"); // Error message show karna
+    // admin k liye 
+    if(email == 'admin@gmail.com' && password == 'admin'){
+    window.location.replace("admin.html");
+    }else{
+      alert("Invalid username or password"); // Error message show karna
+    }
   }
 });
