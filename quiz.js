@@ -74,6 +74,7 @@ printQues();
 btn.addEventListener("click", () => {
   // Check if any radio button is selected
   for (const option of AllRadios) {
+    // console.log(num)
     if (option.checked) {
       selected = true;
       if (option.value == questions[num].correct) {
@@ -82,27 +83,27 @@ btn.addEventListener("click", () => {
         correcOrNot.textContent = `Great ! Your Answer Is Correct...`;
         setTimeout(() => {
           correcOrNot.textContent = ``;
-        }, 500);
+        }, 700);
       } else {
+        incorrect++;
         correcOrNot.style.color = "red";
         correcOrNot.textContent = `Ooh Noo ! Your Answer Is Incorrect...`;
         setTimeout(() => {
           correcOrNot.textContent = ``;
-        }, 500);
-        incorrect++;
+        }, 700);
       }
       break;
     }
   }
   if (selected) {
-    if (num === quesLen) {
+    if (num === (quesLen - 1)) {
       setTimeout(() => {
         alert(`${correct} Correct Answer
 ${incorrect} Incorrect Answer `);
-      }, 800);
+      }, 500);
       num = 0;
       setTimeout(() => {
-        correcOrNot.textContent = " ";
+        correcOrNot.textContent = "";
       }, 1000);
       printQues();
     } else {
