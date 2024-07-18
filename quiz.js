@@ -80,9 +80,15 @@ btn.addEventListener("click", () => {
         correct++;
         correcOrNot.style.color = "green";
         correcOrNot.textContent = `Great ! Your Answer Is Correct...`;
+        setTimeout(() => {
+          correcOrNot.textContent = ``;
+        }, 500);
       } else {
         correcOrNot.style.color = "red";
         correcOrNot.textContent = `Ooh Noo ! Your Answer Is Incorrect...`;
+        setTimeout(() => {
+          correcOrNot.textContent = ``;
+        }, 500);
         incorrect++;
       }
       break;
@@ -90,10 +96,10 @@ btn.addEventListener("click", () => {
   }
   if (selected) {
     if (num == 4) {
-      // console.log(incorrect); //
-
-      alert(`${correct} Correct Answer
+      setTimeout(() => {
+        alert(`${correct} Correct Answer
 ${incorrect} Incorrect Answer `);
+      }, 800);
       num = 0;
       setTimeout(() => {
         correcOrNot.textContent = " ";
